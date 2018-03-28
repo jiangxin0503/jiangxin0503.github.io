@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Zn&#39;s Blogs</title>
+    <title>Tag: Vim | Zn&#39;s Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:type" content="website">
 <meta property="og:title" content="Zn&#39;s Blogs">
-<meta property="og:url" content="https://blogs.jiangnuoyi.cn/index.html">
+<meta property="og:url" content="https://blogs.jiangnuoyi.cn/tags/Vim/index.html">
 <meta property="og:site_name" content="Zn&#39;s Blogs">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -209,21 +209,24 @@
 
             
             <section id="main">
-    <article id="post-make-your-vim-work-as-IDE" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-tag"></i></span>
+        <h1 class="title">#Vim</h1>
+    </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/28/make-your-vim-work-as-IDE/">Make your Vim work as IDE</a>
+            <a class="timeline-article-title" href="/2018/03/28/make-your-vim-work-as-IDE/">Make your Vim work as IDE</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2018/03/28/make-your-vim-work-as-IDE/">
@@ -232,209 +235,18 @@
     </div>
 
 
-                        
-                        
+                    
+                    
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Vim/">Vim</a>
     </div>
 
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="Make-your-Vim-work-as-IDE"><a href="#Make-your-Vim-work-as-IDE" class="headerlink" title="Make your Vim work as IDE"></a>Make your Vim work as IDE</h1><h2 id="Install-MacVim-on-your-Mac"><a href="#Install-MacVim-on-your-Mac" class="headerlink" title="Install MacVim on your Mac"></a>Install MacVim on your Mac</h2><p>Why we do not use the Vim(Carbon)? Beause it isn’t updated much any more. This behaves more like Vim on Unix. So that <a href="http://www.vim.org" target="_blank" rel="noopener">Vim Org</a> also recommand you to install MacVim on your Mac. </p>
-<p>Dowload <a href="https://github.com/macvim-dev/macvim" target="_blank" rel="noopener">MacVim</a>, you will find 3 files in attachment(MacVim, mvim, reader.txt). To move ‘MacVim’ to folder ‘/Applications’ at first, then you finsh the installation.    </p>
-<p>But if you would like to open Vim in the terminal, then you shoud copy file ‘mvim’ to folder ‘/usr/bin/‘ at very begining. However since OS was updated to 10.11, your are not allowed to copy any file to that folder. Here is the alternative solution:</p>
-<p>1.Create a folder ‘bin’ under your user with the commmand:</p>
-<pre><code>mkdir ~/bin
-</code></pre><p>2.Copy mvim file to that folder:    </p>
-<pre><code>cp your/path/mvim ~/bin/
-</code></pre><p>3.Authorize the ‘mvim’ excutable with command:</p>
-<pre><code>chmod +x ~/bin/mvim
-</code></pre><p>4.Set enviroment varaiable, to edit ~/.bash_profile if your are using bash in termimal. if you are using zsh, then you should edit ~/.zshrc. Add ‘export PATH=$HOME/bin/:$PATH’ at the top of the file.</p>
-<p>Now try to input ‘mvim’ in your termial, and see if you can open the MacVim.</p>
-<h2 id="Configure-MacVim"><a href="#Configure-MacVim" class="headerlink" title="Configure MacVim"></a>Configure MacVim</h2><p>Create .vimrc file under your user folder (~/). This file is used to store your vim configuration.  </p>
-<pre><code>touch ~/.vimrc
-</code></pre><p>some settings for examples: </p>
-<pre><code>set incsearch             &quot; start search 
-set ignorecase            &quot; igonre up/low case 
-set nocompatible          &quot; not compatible 
-set wildmenu            &quot; auto complete vim command
-set background=dark        &quot; Set color theme
-colorscheme solarized    &quot; Set Theme
- set laststatus=2         &quot; Display status line
- set ruler                 &quot; display focus
- set number                &quot; display row number
- set cursorline             &quot; highlight current line/colomn
-set cursorcolumn      
-syntax enable            &quot; enable systax check
-syntax on
-set expandtab             &quot; convert tab to space
-set tabstop=4            &quot; convert tab to 4 space
-set shiftwidth=4
-set softtabstop=4
-</code></pre><p>I attached <a href=".vimrc">my configuration</a>, you can download it for you initial setup.</p>
-<h2 id="Manage-your-plugins"><a href="#Manage-your-plugins" class="headerlink" title="Manage your plugins"></a>Manage your plugins</h2><p>There are a lot of plugins make your vim more powerful, and here are some popular plugins;</p>
-<p><a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="noopener">Vundle</a> is the tools to manage your plugin.</p>
-<p><a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noopener">Vim-Ariline</a> is lean &amp; mean status/tabline for vim that’s light as air.</p>
-<p><a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="noopener">NerdTree</a> explores your filesystem and to open files and directories.</p>
-<h2 id="Reprint-posts"><a href="#Reprint-posts" class="headerlink" title="Reprint posts"></a>Reprint posts</h2><p><a href="https://github.com/wiselxin/learning-material/tree/master/MacVim" target="_blank" rel="noopener">https://github.com/wiselxin/learning-material/tree/master/MacVim </a></p>
-
-        
+                </div>
+            </div>
         </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-    <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+    
 </div>
-<script>
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<style>
-    .bdshare_popup_box {
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .bdshare-button-style0-16 a,
-    .bdshare-button-style0-16 .bds_more {
-        padding-left: 20px;
-        margin: 6px 10px 6px 0;
-    }
-    .bdshare_dialog_list a,
-    .bdshare_popup_list a,
-    .bdshare_popup_bottom a {
-        font-family: 'Microsoft Yahei';
-    }
-    .bdshare_popup_top {
-        display: none;
-    }
-    .bdshare_popup_bottom {
-        height: auto;
-        padding: 5px;
-    }
-</style>
-
-
-</div>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/09/hello-world/">Hello World</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/09/hello-world/">
-            <time datetime="2018-03-09T05:34:09.878Z" itemprop="datePublished">2018-03-09</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-    <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
-</div>
-<script>
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<style>
-    .bdshare_popup_box {
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .bdshare-button-style0-16 a,
-    .bdshare-button-style0-16 .bds_more {
-        padding-left: 20px;
-        margin: 6px 10px 6px 0;
-    }
-    .bdshare_dialog_list a,
-    .bdshare_popup_list a,
-    .bdshare_popup_bottom a {
-        font-family: 'Microsoft Yahei';
-    }
-    .bdshare_popup_top {
-        display: none;
-    }
-    .bdshare_popup_bottom {
-        height: auto;
-        padding: 5px;
-    }
-</style>
-
-
-</div>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
 </section>
             
                 
